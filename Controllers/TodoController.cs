@@ -6,6 +6,7 @@ namespace TodoApi.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
+[Produces("application/json")]
 public class TodoItemsController : ControllerBase
 {
     private readonly TodoContext _context;
@@ -16,6 +17,10 @@ public class TodoItemsController : ControllerBase
     }
 
     // GET: api/TodoItems
+    /// <summary>
+    /// Fetches all TodoItems.
+    /// </summary>
+    /// <returns></returns>
     [HttpGet]
     public async Task<ActionResult<IEnumerable<TodoItemDTO>>> GetTodoItems()
     {
@@ -26,6 +31,11 @@ public class TodoItemsController : ControllerBase
 
     // GET: api/TodoItems/5
     // <snippet_GetByID>
+    /// <summary>
+    /// Fetches a specific TodoItem.
+    /// </summary>
+    /// <param name="id"></param>
+    /// <returns></returns>
     [HttpGet("{id}")]
     public async Task<ActionResult<TodoItemDTO>> GetTodoItem(long id)
     {
@@ -43,6 +53,12 @@ public class TodoItemsController : ControllerBase
     // PUT: api/TodoItems/5
     // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
     // <snippet_Update>
+    /// <summary>
+    /// Updates a specific TodoItem.
+    /// </summary>
+    /// <param name="id"></param>
+    /// <param name="todoDTO"></param>
+    /// <returns></returns>
     [HttpPut("{id}")]
     public async Task<IActionResult> PutTodoItem(long id, TodoItemDTO todoDTO)
     {
@@ -76,6 +92,24 @@ public class TodoItemsController : ControllerBase
     // POST: api/TodoItems
     // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
     // <snippet_Create>
+    /// <summary>
+    /// Creates a TodoItem.
+    /// </summary>
+    /// <param name="todoDTO"></param>
+    /// <returns>A newly created TodoItem</returns>
+    /// <remarks>
+    /// Sample request:
+    ///
+    ///     POST /Todo
+    ///     {
+    ///        "id": 1,
+    ///        "name": "Item #1",
+    ///        "isComplete": true
+    ///     }
+    ///
+    /// </remarks>
+    /// <response code="201">Returns the newly created item</response>
+    /// <response code="400">If the item is null</response>
     [HttpPost]
     public async Task<ActionResult<TodoItemDTO>> PostTodoItem(TodoItemDTO todoDTO)
     {
@@ -96,6 +130,11 @@ public class TodoItemsController : ControllerBase
     // </snippet_Create>
 
     // DELETE: api/TodoItems/5
+    /// <summary>
+    /// Deletes a specific TodoItem.
+    /// </summary>
+    /// <param name="id"></param>
+    /// <returns></returns>
     [HttpDelete("{id}")]
     public async Task<IActionResult> DeleteTodoItem(long id)
     {

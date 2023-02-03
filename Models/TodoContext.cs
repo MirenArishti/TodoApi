@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace TodoApi.Models;
 
+#pragma warning disable CS1591
 public class TodoContext : DbContext
 {
     public TodoContext(DbContextOptions<TodoContext> options)
@@ -20,6 +21,7 @@ public class TodoContext : DbContext
 
     public DbSet<TodoItem> TodoItems { get; set; } = null!;
 }
+#pragma warning restore CS1591
 
 // SqlConnection conn = new SqlConnection();
 // conn.ConnectionString =
