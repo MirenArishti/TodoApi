@@ -4,9 +4,9 @@ using Microsoft.OpenApi.Models;
 using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
-var builder1 = new ConfigurationBuilder()
-                .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile("appSettings.json", optional: true, reloadOnChange: true);
+// var builder1 = new ConfigurationBuilder()
+//                 .SetBasePath(Directory.GetCurrentDirectory())
+//                 .AddJsonFile("appSettings.json", optional: true, reloadOnChange: true);
 
 // Add services to the container.
 
@@ -41,8 +41,8 @@ builder.Services.AddSwaggerGen(options =>
 });
 
 var app = builder.Build();
-IConfiguration _configuration = builder1.Build();
-var myConnectionString1 = _configuration.GetConnectionString("Todo_Db");
+// IConfiguration _configuration = builder1.Build();
+// var myConnectionString1 = _configuration.GetConnectionString("Todo_Db");
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
