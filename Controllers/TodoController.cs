@@ -150,6 +150,12 @@ public class TodoItemsController : ControllerBase
         return NoContent();
     }
 
+    [HttpGet]
+    public string ShowMessage()
+    {
+        return "DevOps testing is going on.";
+    }
+
     private bool TodoItemExists(long id)
     {
         return _context.TodoItems.Any(e => e.Id == id);
