@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/home/miren/Desktop/Practice/TodoApi/TodoApi.csproj": {}
+    "C:\\Users\\Miren\\source\\repos\\TodoApi\\TodoApi.csproj": {}
   },
   "projects": {
-    "/home/miren/Desktop/Practice/TodoApi/TodoApi.csproj": {
+    "C:\\Users\\Miren\\source\\repos\\TodoApi\\TodoApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/miren/Desktop/Practice/TodoApi/TodoApi.csproj",
+        "projectUniqueName": "C:\\Users\\Miren\\source\\repos\\TodoApi\\TodoApi.csproj",
         "projectName": "TodoApi",
-        "projectPath": "/home/miren/Desktop/Practice/TodoApi/TodoApi.csproj",
-        "packagesPath": "/home/miren/.nuget/packages/",
-        "outputPath": "/home/miren/Desktop/Practice/TodoApi/obj/",
+        "projectPath": "C:\\Users\\Miren\\source\\repos\\TodoApi\\TodoApi.csproj",
+        "packagesPath": "C:\\Users\\Miren\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Miren\\source\\repos\\TodoApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/miren/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Miren\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -67,7 +69,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -79,7 +82,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/6.0.113/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }
